@@ -1,0 +1,8 @@
+{
+    "main": "site-hospital.js",
+    "name": "site-hospital",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

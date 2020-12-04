@@ -1,0 +1,9 @@
+{
+    "main": "site-payn-spray.js",
+    "name": "site-payn-spray",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay",
+		"licenses"
+    ]
+}

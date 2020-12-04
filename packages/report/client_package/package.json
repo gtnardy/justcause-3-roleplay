@@ -1,0 +1,8 @@
+{
+    "main": "report.js",
+    "name": "report",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

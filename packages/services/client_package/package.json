@@ -1,0 +1,8 @@
+{
+    "main": "services.js",
+    "name": "services",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

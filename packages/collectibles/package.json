@@ -1,0 +1,7 @@
+{
+    "main": "collectibles.js",
+    "name": "collectibles",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]	
+}

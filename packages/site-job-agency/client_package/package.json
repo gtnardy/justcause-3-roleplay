@@ -1,0 +1,8 @@
+{
+    "main": "site-job-agency.js",
+    "name": "site-job-agency",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

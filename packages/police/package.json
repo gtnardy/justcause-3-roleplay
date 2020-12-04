@@ -1,0 +1,7 @@
+{
+    "main": "police.js",
+    "name": "police",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

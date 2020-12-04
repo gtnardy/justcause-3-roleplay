@@ -1,0 +1,7 @@
+{
+    "main": "site-bank.js",
+    "name": "site-bank",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

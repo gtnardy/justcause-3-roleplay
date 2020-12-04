@@ -1,0 +1,17 @@
+{
+    "main": "roleplay.js",
+    "name": "roleplay",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+		"commands",
+		"prototypes",
+        "languages",
+        "nJC3:MP - Spawn Menu",
+        "soundtrack",
+        "sites"
+    ],
+	"websites": [
+        "justcauserp.com",
+        "cdn.discordapp.com"
+	]
+}

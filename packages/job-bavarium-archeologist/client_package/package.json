@@ -1,0 +1,8 @@
+{
+    "main": "job-bavarium-archeologist.js",
+    "name": "job-bavarium-archeologist",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

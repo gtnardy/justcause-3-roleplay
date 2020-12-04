@@ -1,0 +1,9 @@
+{
+    "authors":
+    [],
+    "jcmp_dependencies":
+    ["roleplay"],
+    "main":"news.js",
+    "name":"news",
+    "version":"1.0.0"
+}

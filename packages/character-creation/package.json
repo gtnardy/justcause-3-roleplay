@@ -1,0 +1,9 @@
+{
+    "authors":
+    [],
+    "jcmp_dependencies":
+    [],
+    "main":"character-creation.js",
+    "name":"character-creation",
+    "version":"1.0.0"
+}

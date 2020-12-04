@@ -1,0 +1,9 @@
+{
+    "authors":
+    [],
+    "jcmp_dependencies":
+    [],
+    "main":"alert-screen.js",
+    "name":"alert-screen",
+    "version":"1.0.0"
+}

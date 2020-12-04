@@ -1,0 +1,9 @@
+{
+    "authors":
+    [],
+    "jcmp_dependencies":
+    [],
+    "main":"custom-menu.js",
+    "name":"custom-menu",
+    "version":"1.0.0"
+}

@@ -1,0 +1,8 @@
+{
+    "main": "site-gun-store.js",
+    "name": "site-gun-store",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

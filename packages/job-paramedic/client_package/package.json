@@ -1,0 +1,8 @@
+{
+    "main": "job-paramedic.js",
+    "name": "job-paramedic",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

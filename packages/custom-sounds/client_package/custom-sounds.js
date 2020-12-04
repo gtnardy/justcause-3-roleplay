@@ -1,0 +1,1 @@
+const ui = new WebUIWindow('custom-sounds-ui', `package://custom-sounds/ui/index.html`, new Vector2(jcmp.viewportSize.x, jcmp.viewportSize.y));

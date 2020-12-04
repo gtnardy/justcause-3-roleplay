@@ -1,0 +1,8 @@
+{
+    "main": "race.js",
+    "name": "race",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "vehicle"
+    ]
+}

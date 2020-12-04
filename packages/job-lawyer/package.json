@@ -1,0 +1,7 @@
+{
+    "main": "job-lawyer.js",
+    "name": "job-lawyer",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

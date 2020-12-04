@@ -1,0 +1,7 @@
+{
+    "main": "commands.js",
+    "name": "commands",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]	
+}

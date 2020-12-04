@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+
+@media (min-width: 1367px) {.resizable {transform: scale(1);}}
+@media (max-width: 1366px) {.resizable {transform: scale(0.91);}}
+@media (max-width: 1200px) {.resizable {transform: scale(0.87);}}
+@media (max-width: 1024px) {.resizable {transform: scale(0.82);}}
+@media (max-width: 800px) {.resizable {transform: scale(0.75);}}
+@media (max-width: 720px) {.resizable {transform: scale(0.70);}}
+@media (max-width: 600px) {.resizable {transform: scale(0.67);}}
+
+#police-radio {
+    -webkit-user-select: none;
+    background-image: url("police-radio.png");
+    position: fixed;
+    display: none;
+    bottom: -130px;
+    width: 730px;
+    height: 170px;
+	-webkit-transform-origin: 0 100%;
+    transform: translate(-50%, 0);
+    left: 50%;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+#exit-key {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    text-shadow: 0 0 2px #0009;
+    margin-top: -1.5vw;
+    margin-right: 5vw;
+    opacity: 0.8;
+}
+
+#panel {
+    display: block;
+    width: 303px;
+    height: 87px;
+    margin-top: 41px;
+    margin-left: 253px;
+    border-radius: 9px;
+}
+
+#reloading {
+    width: 10px;
+    height: 10px;
+    background: url("reload.gif");
+    margin-top: 4px;
+    position: absolute;
+    background-size: 10px 10px;
+    display: none;
+}
+
+#player-list {
+    width: 220px;
+    height: 60px;
+    display: inline-block;
+    margin-top: 18px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-size: 12px;
+    height: 12px;
+    padding-left: 10px;
+}
+
+li::before {
+    content: "- ";
+    font-size: 8px;
+    font-weight: bold;
+}
+
+#player-list li img {
+    height: 8px;
+    margin: 0 4px;
+}

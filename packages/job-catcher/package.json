@@ -1,0 +1,7 @@
+{
+    "main": "job-catcher.js",
+    "name": "job-catcher",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "main": "site-snack-bar.js",
+    "name": "site-snack-bar",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

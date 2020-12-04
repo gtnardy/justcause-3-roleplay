@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Berkshire+Swash|Merriweather:400,700|Kanit');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+}
+
+::-webkit-scrollbar {display:none;}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+    margin: 100px 0;
+    position: relative;
+    bottom: -2000px;
+}
+
+.newspaper {
+	background-image: url("images/texture.jpg");
+	background-size: 100%;
+	background-color: rgb(236, 237, 238);
+	width: 700px;
+	border: 5px solid black;
+	padding: 5px;
+	font-family: 'Merriweather', serif;
+	margin: 0 auto;
+	display: none;
+	position: relative;
+}
+
+.newspaper-title {
+	font-size: 18px;
+	display: block;
+	position: relative;
+}
+
+.newspaper-close {
+	position: absolute;
+	margin-left: 235px;
+	font-size: 13px;
+	color: red;
+}
+
+.hr-dotted {
+	border-top: dotted 1px;
+}
+
+hr {
+	margin: 1px 0;
+}
+
+ul {
+	margin-left: 13px;
+}
+
+.newspaper-rmvalue {
+	text-align: center;
+	padding: 0px 10px;
+	margin: 4px 0 0;
+}
+
+.newspaper-value {
+	font-weight: bold;
+}
+
+.newspaper-gov-value {
+	float: right;
+}
+
+.newspaper-rebels-value {
+	float: left;
+}
+
+.newspaper-tycoon-value {
+	float: right;
+}
+
+.newspaper-tycoon-value::before {
+	content: "$ ";
+}
+
+.newspaper-value.up-green::after {
+	content: " ▲";
+	color: #2ecc71;
+}
+
+.newspaper-value.up-red::after {
+	content: " ▲";
+	color: #e74c3c;
+}
+
+.newspaper-value.down-red::after {
+	content: " ▼";
+	color: #e74c3c;
+}
+
+.newspaper-value.down-green::after {
+	content: " ▼";
+	color: #2ecc71;
+}
+
+.newspaper-text {
+	font-size: 12px;
+}
+
+.newspaper-headline {
+	text-transform: uppercase;
+	font-size: 64px;
+	text-align: center;
+	font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.newspaper-subheadline {
+	text-transform: uppercase;
+	font-size: 18px;
+	text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.newspaper-picture-caption {
+	text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+	font-size: 11px;
+}
+
+.newspaper-news {
+	margin-top: 10px;
+}
+
+.newspaper-new {
+	padding: 5px;
+	display: inline-block;
+	vertical-align:top;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+.newspaper-new img{
+	width: 100%;
+	filter: grayscale(50%);
+}
+
+.newspaper-sale {
+	border: 1px solid black;
+	margin: 5px;
+	font-size: 12px;
+	padding: 5px;
+}
+
+.newspaper-sale-text {
+	display: inline-block;
+	font-size: 28px;
+	vertical-align: top;
+	margin: 30px 0px 30px 35px;
+}
+
+.newspaper-sale-text-sub {
+	display: block;
+	font-size: 16px;
+	font-style: italic;
+	margin-left: 40px;
+}
+
+.newspaper-sale-right{
+	margin: 23px 0px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+    margin-left: 30px;
+    width: 170px;
+}
+
+.newspaper-sale-right img{
+	width: initial !important;
+	margin: initial !important;
+}
+
+.newspaper-sale img{
+	width: initial;
+	margin: 23px 0px 23px 11px;
+}
+
+li {
+	margin: 2px 0px;
+}
+
+.newspaper-news-left{
+	width: 42%;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.newspaper-news-right{
+	width: 56%;
+	vertical-align: top;
+	display: inline-block;
+}
+
+h1 {
+	font-family: 'Berkshire Swash', cursive;
+	text-align: center;
+	font-size: 36px;
+}
+
+.newspaper-subheader {
+	width: 130px;
+	display: inline-block;
+	font-size: 12px;
+}
+
+#newspaper-date {
+	text-transform: uppercase;
+}
+
+.newspaper-header {
+	text-align: center;
+}
+
+.newspaper-new-changelog {
+
+	vertical-align: top;
+	display: inline-block;
+	width: 100%;
+}
+
+.newspaper-footer {
+	text-align: center;
+	font-size: 12px;
+	margin: 10px 0;
+    font-family: 'Merriweather', serif;
+	font-weight: bold;
+}
+
+.newspaper-piston-title {
+	font-size: 50px;
+	font-weight: bold;
+	display:block;
+	text-align: center;
+}
+
+.newspaper-piston-prize {
+	text-align: center;
+	font-weight: bold;
+	display:block;
+}
+
+.newspaper-piston-date {
+	text-align: center;
+	font-weight: bold;
+	display:block;
+}
+
+.weather-degrees {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#weather-degrees-min:before {
+	content: "|";
+}
+
+#weather-degrees-max {
+	font-weight: bold;
+	font-size: 50px;
+}
+
+#weather-degrees-min {
+	font-size: 30px;
+}
+
+#weather-text {
+	display: inline-block;
+	font-size: 28px;
+	text-transform: lowercase;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-left: 10px;
+}
+
+#weather-text-description {
+	display: block;
+	font-size: 14px;
+}
+
+.help-panel-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    text-shadow: 0 0 2px #0009;
+    margin-top: -2vw;
+    font-family: 'Kanit', sans-serif;
+}
+
+.newspaper-breaking-new {
+	font-size: 12px;
+	position: relative;
+}
+
+.newspaper-breaking-news {
+	border: 1px dotted #000c;
+	padding: 3px;
+}
+
+.newspaper-breaking-news hr {
+	width: 60%;
+	margin: 10px 0;
+	border-top: 1px dotted black;
+}
+
+.newspaper-breaking-news hr:last-child {
+	display: none;
+}
+
+.newspaper-breaking-new-text {
+	display: block;
+	padding-bottom: 5px;
+	word-wrap: break-word;
+}
+
+.newspaper-breaking-new-footer {
+	display: block;
+	text-transform: uppercase;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.newspaper-breaking-new-footer-right {
+	float: right;
+}
+
+.newspaper-title-right {
+	font-size: 10px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
