@@ -1,0 +1,8 @@
+{
+    "main": "announcer.js",
+    "name": "announcer",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]	
+}

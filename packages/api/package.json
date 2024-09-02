@@ -1,0 +1,15 @@
+{
+    "main": "api.js",
+    "name": "api",
+    "version": "1.0.0",
+    "jcmp_dependencies": [],
+    "dependencies": {
+        "ajax-request": "^1.2.3",
+        "cors": "^2.8.4",
+        "express": "^4.16.2",
+        "image-downloader": "^3.3.0",
+        "request": "^2.88.0",
+        "request-promise": "^4.2.4",
+        "showdown": "^1.9.0"
+    }
+}

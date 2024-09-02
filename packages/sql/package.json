@@ -1,0 +1,9 @@
+{
+  "name": "sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sql.js",
+  "dependencies": {
+    "mysql": "^2.15.0"
+  }
+}

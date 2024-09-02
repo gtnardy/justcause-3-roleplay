@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+
+		<div id="keyhold">
+			<span id="keyhold-progress">
+				<span id="keyhold-progress-inner"></span>
+			</span>
+			<span id="keyhold-text">Unloading</span>
+		</div>
+
+		<div id="action-hud" class="hideable">
+			<div class="action-hud-text"></div>
+			<div class="action-hud-action">
+				<span class="action-hud-button"></span>
+				<span class="action-hud-action-text"></span>
+			</div>
+		</div>
+
+		<div id="afk-ui" class="alert-ui">
+			<div class="container">
+				<h1>AFK</h1>
+				<h2></h2>
+			</div>
+		</div>
+
+        <div id="death-ui" class="alert-ui">
+            <div class="container">
+                <img src="images/death.png" />
+                <h1></h1>
+                <h2></h2>
+                <h3></h3>
+            </div>
+		</div>
+
+        <div id="arrested-ui" class="alert-ui">
+            <div class="container">
+                <img src="images/prison.png" />
+                <h1>Arrested</h1>
+                <h2>30 seconds</h2>
+            </div>
+		</div>
+
+        <div id="handcuff-ui" class="alert-ui">
+            <div class="container">
+                <img src="images/handcuff.png" />
+                <h1>Arrested</h1>
+                <h2>30 seconds</h2>
+            </div>
+		</div>
+
+        <div id="scoreboard" class="resizable">
+			<div class="header-title">PLAYERS</div>
+
+			<div class="row header">
+				<div class="column id">#</div>
+				<div class="column level">Level</div>
+				<div class="column permissions"></div>
+				<div class="column avatar"></div>
+				<div class="column name">Name</div>
+				<div class="column job">Job</div>
+				<div class="column badges">Badges</div>
+				<div class="column ping">Ping</div>
+				<div class="column country"></div>
+			</div>
+
+			<div class="players">
+
+			</div>
+        </div>
+
+		<div id="helpmessage" class="resizable">
+            <h2>Site: justcauserp.com - Discord: discord.justcauserp.com - Become VIP: patreon.justcauserp.com</h2>
+		</div>
+
+        <div class="hud left player-stats">
+			<div class="player-stats-stealth hideable-press">
+				<span></span>
+				<progress value="0" max="100"></progress>
+			</div>
+
+			<div class="player-stats-stamina hideable-press">
+				<span></span>
+				<progress value="0" max="100"></progress>
+			</div>
+
+			<div class="player-stats-driving hideable-press">
+				<span></span>
+				<progress value="0" max="100"></progress>
+			</div>
+
+			<div class="player-stats-flying hideable-press">
+				<span></span>
+				<progress value="0" max="100"></progress>
+			</div>
+
+			<div class="player-stats-lungcapacity hideable-press">
+				<span></span>
+				<progress value="0" max="100"></progress>
+			</div>
+
+			<div class="player-stats-strength hideable-press">
+				<span></span>
+				<progress value="0" max="100"></progress>
+			</div>
+		</div>
+
+        <div class="hud upper military-bases">
+
+		</div>
+		
+        <div class="hud upper right">
+			<div class="hud-info resizable">
+
+				<div class="bag-hud data-hud">
+					<div class="money-hud">
+                        <img id="bag-image" src="images/bag.png"/>
+                        <span id="bag-data">120</span>
+                    </div>
+                    
+                    <progress id="bag-progress-bar" value="0" max="100"></progress>
+                    <div>
+                        <div class="bag-hud-name"></div>
+                    </div>
+                    <span id="bag-data-append"></span>
+                </div>
+                
+                <div class="level data-hud job-hud">
+                    <span id="job-level-data"></span>
+                </div>
+
+				<div class="experience data-hud job-hud">
+                    <div class="experience-hud">
+                        <span id="job-experience-data"></span>
+                        <span id="job-max-experience-data"></span>
+                    </div>
+
+                    <progress id="job-experience-progress-bar" value="0" max="100"></progress>
+                    <div>
+                        <div class="job-experience-hud-name"></div>
+                    </div>
+                    <span id="job-experience-data-append" class="experience-data-append"></span>
+                </div>
+                
+				<div class="level data-hud">
+					<span id="level-data">1</span>
+				</div>
+
+				<div class="experience data-hud ">
+					<div class="experience-hud">
+						<span id="experience-data"></span>
+						<span id="max-experience-data"></span>
+					</div>
+
+                    <progress id="experience-progress-bar" value="0" max="100"></progress>
+                    <div class="experience-hud-bonuses"></div>
+                    <span id="experience-data-append" class="experience-data-append"></span>
+				</div>
+
+				<div class="money data-hud">
+					<span id="money-data-append"></span>
+					<span id="money-data"></span>
+                </div>
+			</div>
+
+			<div class="heat resizable">
+				<div class="heat-header"></div>
+				<div class="heat-bottom"></div>
+			</div>
+
+			<br>
+			<div id="current-site" class="resizable">
+				<span class="current-site-province-name-value province-name"></span>
+				<br>
+				<span class="current-site-base-percent"></span>
+				<img class="current-site-img rebels-flag" src="images/rebels_flag.jpg" />
+				<img class="current-site-img military-flag" src="images/military_flag.jpg" />
+				<img class="current-site-img white-flag" src="images/white_flag.jpg" />
+				<span class="current-site-name-value site-name"></span>
+				<br>
+				<span class="current-site-bavarium-value"></span>
+				<br>
+				<span class="current-site-protection">
+					<img src="images/protection.png" />
+					<span class="current-site-protection-value"></span>
+				</span>
+
+			</div>
+        </div>
+
+		<div class="job-ui hud upper resizable">
+			<div class="job-ui-header"></div>
+
+			<div class="job-ui-text text0"></div>
+
+			<div class="job-ui-text text1"></div>
+			<progress id="job-ui-progress-bar" class="progress1" value="10" max="100"></progress>
+
+			<div class="job-ui-text text2"></div>
+			<progress id="job-ui-progress-bar" class="progress2" value="50" max="100"></progress>
+		</div>
+
+		<div class="taximeter-ui hud upper resizable">
+			<div class="taximeter-ui-text-taximeter">?</div>
+			<div class="taximeter-ui-fare">?</div>
+			<div class="taximeter-ui-text-fare">?</div>
+		</div>
+
+		<div class="hud lower right">
+			<div class="resizable">
+				<div class="fuel bar">
+					<div class="fuel bar-level"></div>
+					<div class="fuel bar-level"></div>
+					<div class="fuel bar-level"></div>
+					<div class="fuel bar-level"></div>
+					<div class="fuel bar-level"></div>
+					<div class="fuel bar-level"></div>
+					<div class="fuel bar-level"></div>
+					<div class="fuel bar-level"></div>
+					<div class="fuel bar-level"></div>
+					<div class="fuel bar-level"></div>
+					<div class="fuel fuel-label text">?</div>
+				</div>
+
+				<div class="hungry bar">
+					<div class="hungry bar-level"></div>
+					<div class="hungry bar-level"></div>
+					<div class="hungry bar-level"></div>
+					<div class="hungry bar-level"></div>
+					<div class="hungry bar-level"></div>
+					<div class="hungry bar-level"></div>
+					<div class="hungry bar-level"></div>
+					<div class="hungry bar-level"></div>
+					<div class="hungry bar-level"></div>
+					<div class="hungry bar-level"></div>
+					<div class="hungry hungry-label text">?</div>
+				</div>
+
+				<div class="thirsty bar">
+					<div class="thirsty bar-level"></div>
+					<div class="thirsty bar-level"></div>
+					<div class="thirsty bar-level"></div>
+					<div class="thirsty bar-level"></div>
+					<div class="thirsty bar-level"></div>
+					<div class="thirsty bar-level"></div>
+					<div class="thirsty bar-level"></div>
+					<div class="thirsty bar-level"></div>
+					<div class="thirsty bar-level"></div>
+					<div class="thirsty bar-level"></div>
+					<div class="thirsty thirsty-label text">?</div>
+				</div>
+			</div>
+        </div>
+    </body>
+	<script src="http://justcauserp.com/cdn/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</html>

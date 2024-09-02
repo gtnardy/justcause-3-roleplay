@@ -1,0 +1,7 @@
+{
+    "main": "job-police.js",
+    "name": "job-police",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

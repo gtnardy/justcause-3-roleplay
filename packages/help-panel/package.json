@@ -1,0 +1,9 @@
+{
+    "authors":
+    [],
+    "jcmp_dependencies":
+    [],
+    "main":"help-panel.js",
+    "name":"help-panel",
+    "version":"1.0.0"
+}

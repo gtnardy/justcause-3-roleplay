@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+
+	<body>
+
+		<div id="alert-center">
+			<div class="alert-img"></div>
+			<span class="alert-text"></span>
+			<span class="alert-time"></span>
+		</div>
+
+		<div id="race-info" class="resizable">
+			<span class="race-time"></span>
+			<span class="race-checkpoint-img race-img"></span>
+			<span class="race-checkpoint-value"></span>
+			<span class="race-lap-img race-img"></span>
+			<span class="race-lap-value"></span>
+		</div>
+
+		<div id="race-players" class="resizable">
+			<div id="race-players-record"></div>
+			<div id="race-players-scoreboard"></div>
+		</div>
+
+		<div id="race-ui" class="alert-ui">
+			<div class="container">
+				<h1></h1>
+			</div>
+		</div>
+		<div id="black-screen"></div>
+
+		<div id="loading" class="hud left lower">
+			<span id="loading-message"></span>
+			<img src="images/89.gif"/>
+        </div>
+
+	</body>
+	<script src="./jquery.min.js"></script>
+	<script>
+
+		var LOADING_MESSAGES = [
+			"Adding Radars",
+			"Charging Taxes",
+			"Shining Vehicles",
+			"Building Statues",
+			"Ejecting you from the Crane",
+			"Positioning the Sun",
+			"Repairing exploded Gas Stations",
+			"Planting Trees",
+			"Thinking of new Sentences to put here",
+			"Arresting DRYBONES",
+			"Allowing Grappl... Oops!",
+			"Fueling Stations",
+			"Uploading another Crash Log",
+			"Printing today's Newspaper",
+			"Grilling Kebabs",
+			"Hiding Animals",
+			"Feeding Sharks",
+			"Occulting the Ptakojester",
+			"Hiding a Sport Car at Town Hall",
+		];
+
+		function changeLoadingText() {
+			$('#loading-message').html(LOADING_MESSAGES[Math.floor(Math.random() * LOADING_MESSAGES.length)]);
+		}
+
+		changeLoadingText();
+
+		let intervalLoading = setInterval(changeLoadingText, 6000);
+
+		let timeoutLoading = setTimeout(function() {
+			if (intervalLoading) {
+				clearInterval(intervalLoading);
+				intervalLoading = null;
+			}
+			$('#loading').html("<span style='color: red; font-weight: bold;'>YOUR GAME IS TAKING TOO LONG TO LOAD. HAVE YOU ACCEPTED THE EXTERNAL WEBSITE? <span style='font-size: 11px'>RESET IT IN SETTINGS > OTHER > RESET APPROVED WEBSITES</span></span>");
+		}, 60000);
+
+		$("#race-players").hide();
+		$("#race-info").hide();
+		$("#race-ui").hide();
+		$("#alert-center").hide();
+
+		var stopwatch = null;
+
+		function stopStopwatch() {
+			if (stopwatch)
+				clearInterval(stopwatch.interval);
+		}
+
+		function startStopwatch() {
+			stopStopwatch();
+
+			stopwatch = {
+				minutes: 0,
+				seconds: 0,
+				miliseconds: 0,
+				interval: setInterval(function() {
+
+					stopwatch.miliseconds += 2;
+
+					if (stopwatch.miliseconds >= 100) {
+						stopwatch.miliseconds = 0;
+						stopwatch.seconds++;
+
+						if (stopwatch.seconds >= 60) {
+							stopwatch.seconds = 0;
+							stopwatch.minutes++;
+						}
+					}
+
+					$(".race-time").html(("0" + stopwatch.minutes).slice(-2) + ":" + ("0" + stopwatch.seconds).slice(-2) + "." + ("0" + stopwatch.miliseconds).slice(-2));
+				}, 20)
+			};
+        }
+        
+		function startReverseStopwatch(minutes, seconds) {
+			stopStopwatch();
+
+			stopwatch = {
+				minutes: minutes,
+				seconds: seconds,
+				miliseconds: 0,
+				interval: setInterval(function() {
+
+					stopwatch.miliseconds -= 2;
+
+					if (stopwatch.miliseconds < 0) {
+						stopwatch.miliseconds = 99;
+						stopwatch.seconds--;
+
+						if (stopwatch.seconds < 0) {
+							stopwatch.seconds = 59;
+                            stopwatch.minutes--;
+                            
+                            if (stopwatch.minutes < 0) {
+                                stopwatch.minutes = 0;
+                                stopwatch.seconds = 0;
+                                stopwatch.miliseconds = 0;
+                                stopStopwatch();
+                            }
+						}
+					}
+
+					$(".race-time").html(("0" + stopwatch.minutes).slice(-2) + ":" + ("0" + stopwatch.seconds).slice(-2) + "." + ("0" + stopwatch.miliseconds).slice(-2));
+				}, 20)
+			};
+		}
+
+		jcmp.AddEvent('FlashBlackScreen', function(time) {
+			$("#black-screen").stop();
+			$("#black-screen").fadeIn(100).delay(time).fadeOut(300);
+		});
+
+		jcmp.AddEvent('UpdateHUD', function(args) {
+			let data = JSON.parse(args);
+
+			if (data.loading !== undefined) {
+
+				if (data.loading == 1)
+					LOADING_MESSAGES = ["Joining Just Cause - Roleplay"];
+
+				if (!data.loading) {
+					$('#loading').fadeOut(300);
+						
+					if (intervalLoading) {
+						clearInterval(intervalLoading);
+						intervalLoading = null;
+					}
+						
+					if (timeoutLoading) {
+						clearInterval(timeoutLoading);
+						timeoutLoading = null;
+					}
+				}
+			}
+
+			if (data.startedMotion !== undefined) {
+				$('#black-screen').fadeOut(200);
+			}
+
+			if (data.alert !== undefined) {
+				if (data.alert) {
+					$("#alert-center .alert-img").html(data.alert.label);
+					$("#alert-center .alert-text").html(data.alert.text);
+					$("#alert-center .alert-time").html(data.alert.time);
+					$("#alert-center").show();
+				} else
+					$("#alert-center").hide();
+            }
+
+		});
+
+		jcmp.AddEvent('UpdateRacePlayersUI', function(players) {
+			if (players == null) {
+				$("#race-players").hide();
+				return;
+			}
+
+			players = JSON.parse(players);
+
+			$("#race-players-scoreboard").html("");
+
+			for (let p in players) {
+
+                let player = players[p];
+
+				let element = $("<div class='race-player'></div>");
+				let classification = $('<span class="race-player-classification"></span>');
+				let name = $('<span class="race-player-name"></span>');
+                let label = $("<span class='race-label'></span>");
+
+                if (player.finished)
+                    label.addClass("race-label-finished");
+                else if (player.left)
+                    label.addClass("race-label-left");
+                else if (player.recordTime)
+                    label.html(player.recordTime);
+
+				if (player.isLocalPlayer)
+					element.addClass("active");
+
+				classification.html(Number(p) + 1);
+				name.html(player.name);
+
+				element.append(classification);
+				element.append(name);
+				element.append(label);
+
+				$("#race-players-scoreboard").append(element);
+			}
+
+			$("#race-players").show();
+		});
+
+		jcmp.AddEvent('UpdateRaceUI', function(args) {
+
+			if (!args) {
+				stopStopwatch();
+				$("#race-info").hide();
+                $("#race-ui").hide();
+                return;
+            }
+
+            args = JSON.parse(args);
+
+            if (args.countdown) {
+                if (args.countdown === "GO") {
+                    $("#race-ui .container").addClass("race-go");
+                    $("#race-players").show();
+                    startStopwatch();
+                } else
+                    $("#race-ui .container").removeClass("race-go");
+
+                $("#race-ui h1").html(args.countdown);
+                $("#race-ui").stop(true, true);
+                $("#race-ui").delay(1500).fadeOut(1000);
+                $("#race-ui").show();
+            } else if (args.countdown === false) {
+                $("#race-ui").hide();
+                $("#race-ui").stop(true, true);
+            }
+            
+            if (args.restartStopwatch) {
+                if (args.drivingTest) {
+                    startReverseStopwatch(args.drivingTest.minutes, args.drivingTest.seconds);
+                } else {
+                    startStopwatch();
+                }
+                $("#race-info").show();
+            }
+            
+            if (args.drivingTest) {
+                if (args.drivingTest.redTime) 
+                    $(".race-time").css("color", "red");
+                else
+                    $(".race-time").css("color", "white");
+
+                $("#race-ui").addClass("driving-test");
+                $("#race-info").addClass("driving-test");
+            } else {
+                $("#race-ui").removeClass("driving-test");
+                $("#race-info").removeClass("driving-test");
+            }
+
+            if (args.checkpointLabel !== undefined) {
+                if (args.checkpointLabel) {
+                    $("#race-info").show();
+                    $("#race-info .race-checkpoint-value").html(args.checkpointLabel);
+                    $("#race-info .race-checkpoint-value").show();
+                    $("#race-info .race-checkpoint-img").show();
+                } else {
+                    $("#race-info .race-checkpoint-value").hide();
+                    $("#race-info .race-checkpoint-img").hide();
+
+                }
+            }
+
+            if (args.lapLabel !== undefined) {
+                if (args.lapLabel) {
+                    $("#race-info").show();
+                    $("#race-info .race-lap-value").html(args.lapLabel);
+                    $("#race-info .race-lap-value").show();
+                    $("#race-info .race-lap-img").show();
+                } else {
+                    $("#race-info .race-lap-value").hide();
+                    $("#race-info .race-lap-img").hide();
+                }
+			}
+			
+			if (args.record && args.record.player) {
+				$("#race-players-record").html(`Record (${args.record.player}) ${args.record.time}`);
+			}
+		});
+	</script>
+</html>

@@ -1,0 +1,332 @@
+
+* 
+{
+	user-select: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 550px;
+    cursor: default;
+    font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html
+{
+    visibility: hidden;
+    color: white;
+}
+
+
+div.window
+{
+    position: fixed;
+    left: 10px;
+	top: 5px;
+    width: 550px;
+    height: 320px;
+    /*border: 2px solid blue;*/
+}
+
+::-webkit-scrollbar 
+{
+    width: 16px;
+    height: 18px;
+    -webkit-transition: all 0.2s linear;
+}
+::-webkit-scrollbar-thumb 
+{
+    height: 6px;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+::-webkit-scrollbar-thumb:hover 
+{
+    height: 6px;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+::-webkit-scrollbar-button 
+{
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner 
+{
+    background-color: transparent;
+}
+
+div.message-area
+{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: -3.25px;
+    transition: border-color 0.2s linear, background-color 0.2s linear;
+}
+
+div.window:hover ::-webkit-scrollbar-thumb
+{
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+div.window:hover ::-webkit-scrollbar-thumb:hover
+{
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+div.channels
+{
+    position: absolute;
+    width: 100%;
+    top: calc(-6%);
+    height: 6%;
+    text-align: center;
+    vertical-align: bottom;
+	display: none;
+}
+
+span.channel
+{
+    float: left;
+    position: relative;
+    bottom: 0;
+    vertical-align: bottom;
+	height: fit-content;
+	width: fit-content;
+    border-radius: 2px 2px 0 0;
+    font-size: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    border-bottom: 2px solid transparent;
+	color: white;
+	text-align: center;
+    transition: all 0.2s linear;
+    text-shadow: 0 0 4px black;
+}
+
+div.new-icon
+{
+    position: absolute;
+    top: -120%;
+    left: 50%;
+    transform: translateX(-55%);
+    text-shadow: 1px 1px 1px black;
+    animation-name: new-m;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes new-m 
+{
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+span.channel:hover
+{
+    border-color: white;
+}
+
+span.channel.active
+{
+    font-weight: bold;
+    border-color: white;
+}
+
+div.message
+{
+    float: left;
+    clear: both;
+    padding: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: auto;
+    width: 96%;
+    user-select: none;
+    word-wrap: break-word;
+    text-shadow: 1px 1px 1px black;
+    cursor: auto;
+}
+
+div.message:hover
+{
+    cursor: default;
+}
+
+div.message.atted
+{
+    background-color: rgba(255, 255, 0, 0.5);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-right: 8px solid yellow;
+    padding-right: 6px;
+}
+
+input[type=text], select 
+{
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    padding: 5px 5px;
+    border: none;
+    background: none;
+    text-shadow: 1px 1px 1px black;
+    /*border: 1.5px solid rgba(255, 255, 255, 0.5);*/
+    border-bottom: 4px solid white;
+    bottom: 0;
+    height: 10%;
+    color: white;
+    cursor: auto;
+}
+
+input:focus 
+{
+    outline-width: 0;
+}
+
+span.player-name
+{
+    padding: 2px;
+    padding-right: 1px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: default;
+    /*transition: background-color 0.2s linear, box-shadow 0.2s linear;*/
+}
+
+span.player-name:hover
+{
+    /*background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);*/
+}
+
+#tag
+{
+	position: relative;
+    bottom: 2px;
+	height: 100%;
+	width: max-content;
+	padding-left: 6px;
+	padding-right: 6px;
+	background-color: gray;
+	border-radius: 5px;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: 2px;
+    font-size: 14px;
+    filter: grayscale(30%);
+}
+
+div.tooltip
+{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    cursor: default;
+    padding: 4px;
+    text-align: center;
+    max-width: 12vw;
+    z-index: 9999;
+}
+
+span.tooltip-level
+{
+    color: #FFD000;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+    font-style: italic;
+}
+
+hr
+{
+    margin: 2px;
+    padding: 0px;
+    border : 0;
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.italic
+{
+    font-style: italic;
+}
+
+
+/* Special rules for smaller screens */
+@media screen and (max-width: 1400px) 
+{
+        
+    div.window
+    {
+        width: 420px;
+        height: 256px;
+    }
+
+    div.channels
+    {
+        top: calc(-7.5%);
+    }
+
+}
+
+
+span.item {font-weight: bold;}
+
+span.item.Common {color: #D99055;}
+span.item.Uncommon {color: #77ED3B;}
+span.item.Rare {color: #3BC1ED;}
+span.item.Epic {color: #E73BED;}
+span.item.Legendary {animation: legendary-tooltip 10s infinite linear;}
+
+
+div.tooltip>span.rarity {font-weight: bold;}
+
+div.tooltip>span.rarity.Common {color: #D99055;}
+div.tooltip>span.rarity.Uncommon {color: #77ED3B;}
+div.tooltip>span.rarity.Rare {color: #3BC1ED;}
+div.tooltip>span.rarity.Epic {color: #E73BED;}
+div.tooltip>span.rarity.Legendary {animation: legendary-tooltip 10s infinite linear;}
+
+
+@keyframes legendary-tooltip 
+{
+    0% { color: #FF4040; }
+    18% { color: #FFC640; }
+    36% { color: #FFFC40; }
+    54% { color: #40FF40; }
+    72% { color: #40AFFF; }
+    90% { color: #DF40FF; }
+    100% { color: #FF4040; }
+}
+
+div.tooltip>span.title
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+hr.tooltip
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0px;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, white, transparent);
+}

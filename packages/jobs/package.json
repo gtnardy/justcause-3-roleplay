@@ -1,0 +1,7 @@
+{
+    "main": "jobs.js",
+    "name": "jobs",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+@import url('http://justcauserp.com/cdn/flags.css');
+
+@media (min-width: 1367px) {.resizable {transform: scale(1);}}
+@media (max-width: 1366px) {.resizable {transform: scale(0.91);}}
+@media (max-width: 1200px) {.resizable {transform: scale(0.87);}}
+@media (max-width: 1024px) {.resizable {transform: scale(0.82);}}
+@media (max-width: 800px) {.resizable {transform: scale(0.75);}}
+@media (max-width: 720px) {.resizable {transform: scale(0.70);}}
+@media (max-width: 600px) {.resizable {transform: scale(0.67);}}
+
+#national-id {
+    -webkit-user-select: none;
+    background-image: url("national-id.jpg");
+    position: fixed;
+    right: 0;
+    opacity: 0;
+    bottom: -1vw;
+    margin-right: 10vw;
+    box-shadow: 0px 0px 5px #0009;
+    width: 500px;
+    height: 363px;
+    font-family: 'Anonymous Pro', monospace;
+    text-align: center;
+	-webkit-transform-origin: 100% 100%;
+}
+
+#national-id-left, #national-id-right {
+    width: 250px;
+    height: 362px;
+}
+
+#national-id-left {
+    float: left;
+    margin-top: 180px;
+}
+
+span {
+    display: block;
+	white-space: nowrap;
+}
+
+#national-id-left span {
+    margin-top: 19px;
+    margin-right: 12px;
+}
+
+#national-id-left #label-id {
+    margin-left: 41px;
+}
+
+#national-id-left #label-name {
+    margin-left: 64px;
+}
+
+#national-id-left #label-job {
+    margin-left: 85px;
+}
+
+#national-id-left #label-age {
+    margin-left: 59px;
+    float: left;
+}
+
+#national-id-left #label-nationality {
+    float: right;
+    margin-right: 21px;
+}
+
+#national-id-left #label-nationality img {
+    filter: grayscale(40%);
+}
+
+#national-id-right {
+    float: right;
+    text-transform: uppercase;
+}
+
+#national-id-right span {
+    margin-right: 20px;
+}
+
+#national-id-licenses {
+    height: 202px;
+    margin-top: 50px;
+}
+
+#national-id-licenses span {
+    margin-top: 15px;
+}
+
+#national-id-right #label-land {
+    margin-left: 55px;
+}
+
+#national-id-right #label-land-bike {
+    margin-left: 58px;
+}
+
+#national-id-right #label-sea {
+    margin-left: 56px;
+}
+
+#national-id-right #label-air {
+    margin-left: 70px;
+}
+
+#national-id-right #label-air-helis {
+    margin-left: 58px;
+}
+
+#national-id-insurances {
+    height: 123px;
+}
+
+#national-id-insurances span {
+    margin-top: 16px;
+}
+
+#national-id-insurances #label-health {
+    margin-left: 75px;
+}
+
+#national-id-insurances #label-life {
+    margin-left: 54px;
+}
+
+.no {
+    color: #e76368;
+}
+
+.exit-key {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    text-shadow: 0 0 2px #0009;
+    margin-top: -2vw;
+}

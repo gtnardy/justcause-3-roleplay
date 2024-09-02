@@ -1,0 +1,7 @@
+{
+    "main": "job-newsreporter.js",
+    "name": "job-newsreporter",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

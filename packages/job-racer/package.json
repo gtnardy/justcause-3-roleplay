@@ -1,0 +1,7 @@
+{
+    "main": "job-racer.js",
+    "name": "job-racer",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

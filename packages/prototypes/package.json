@@ -1,0 +1,9 @@
+{
+    "main": "prototypes.js",
+    "name": "prototypes",
+    "version": "1.0.0",
+    "jcmp_dependencies": [],
+    "dependencies": {
+        "moment": "^2.24.0"
+    }
+}

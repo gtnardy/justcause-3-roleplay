@@ -1,0 +1,8 @@
+{
+    "main": "player-context-menu.js",
+    "name": "player-context-menu",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

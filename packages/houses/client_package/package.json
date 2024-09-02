@@ -1,0 +1,8 @@
+{
+    "main": "houses.js",
+    "name": "houses",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

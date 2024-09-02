@@ -1,0 +1,8 @@
+{
+    "main": "languages.js",
+    "name": "languages",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+		"prototypes"
+    ]	
+}

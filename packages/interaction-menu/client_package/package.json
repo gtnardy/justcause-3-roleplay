@@ -1,0 +1,9 @@
+{
+    "main": "interaction-menu.js",
+    "name": "interaction-menu",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay",
+		"sites"
+    ]
+}

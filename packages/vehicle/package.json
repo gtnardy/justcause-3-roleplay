@@ -1,0 +1,7 @@
+{
+    "main": "vehicle.js",
+    "name": "vehicle",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

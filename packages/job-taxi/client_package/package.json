@@ -1,0 +1,8 @@
+{
+    "main": "job-taxi.js",
+    "name": "job-taxi",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

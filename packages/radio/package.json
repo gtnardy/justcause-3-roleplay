@@ -1,0 +1,7 @@
+{
+	"main": "radio.js",
+	"name": "radio",
+	"version": "1.0.0",
+	"jcmp_dependencies": [
+	]
+}

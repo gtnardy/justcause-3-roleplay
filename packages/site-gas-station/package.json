@@ -1,0 +1,7 @@
+{
+    "main": "site-gas-station.js",
+    "name": "site-gas-station",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]	
+}

@@ -1,0 +1,8 @@
+{
+    "main": "job-farmer.js",
+    "name": "job-farmer",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

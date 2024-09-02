@@ -1,0 +1,9 @@
+{
+    "main": "site-police-department.js",
+    "name": "site-police-department",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay",
+		"police"
+    ]
+}

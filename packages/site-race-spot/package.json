@@ -1,0 +1,7 @@
+{
+    "main": "site-race-spot.js",
+    "name": "site-race-spot",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "main": "personal-vehicles.js",
+    "name": "personal-vehicles",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+        "roleplay"
+    ]
+}

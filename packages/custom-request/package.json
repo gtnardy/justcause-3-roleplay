@@ -1,0 +1,9 @@
+{
+    "authors":
+    [],
+    "jcmp_dependencies":
+    [],
+    "main":"custom-request.js",
+    "name":"custom-request",
+    "version":"1.0.0"
+}

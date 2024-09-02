@@ -1,0 +1,8 @@
+{
+	"main": "national-id.js",
+	"name": "national-id",
+	"version": "1.0.0",
+	"jcmp_dependencies": [
+        "roleplay"
+	]
+}

@@ -1,0 +1,9 @@
+{
+    "authors":
+    [],
+    "jcmp_dependencies":
+    [],
+    "main":"tutorial.js",
+    "name":"tutorial",
+    "version":"1.0.0"
+}

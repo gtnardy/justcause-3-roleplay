@@ -1,0 +1,9 @@
+{
+    "authors":
+    [],
+    "jcmp_dependencies":
+    [],
+    "main":"input-text.js",
+    "name":"input-text",
+    "version":"1.0.0"
+}

@@ -1,0 +1,7 @@
+{
+    "main": "site-radar.js",
+    "name": "site-radar",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

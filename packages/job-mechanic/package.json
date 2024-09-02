@@ -1,0 +1,7 @@
+{
+    "main": "job-mechanic.js",
+    "name": "job-mechanic",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}

@@ -1,0 +1,9 @@
+{
+	"main": "discord.js",
+	"name": "discord",
+	"version": "1.0.0",
+	"jcmp_dependencies": [],
+	"dependencies": {
+		"discord.js": "^11.4.2"
+	}
+}

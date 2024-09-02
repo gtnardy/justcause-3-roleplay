@@ -1,0 +1,9 @@
+{
+    "authors":
+    [],
+    "jcmp_dependencies":
+    ["roleplay"],
+    "main":"notifications.js",
+    "name":"notifications",
+    "version":"1.0.0"
+}

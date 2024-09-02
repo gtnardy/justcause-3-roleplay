@@ -1,0 +1,9 @@
+{
+    "authors":
+    [],
+    "jcmp_dependencies":
+    [],
+    "main":"custom-sounds.js",
+    "name":"custom-sounds",
+    "version":"1.0.0"
+}

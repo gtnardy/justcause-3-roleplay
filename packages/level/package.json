@@ -1,0 +1,7 @@
+{
+    "main": "level.js",
+    "name": "level",
+    "version": "1.0.0",
+    "jcmp_dependencies": [
+    ]
+}
